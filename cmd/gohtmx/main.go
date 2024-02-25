@@ -21,9 +21,14 @@ func main() {
 	})
 	router.POST("/run", func(c *gin.Context) {
 		message := c.PostForm("prompt")
-		response := callOllama(message)
+		promptMessage := fmt.Sprintf(`
+You are a helpful AI assistant, who likes to make puns.
+When asked to do something, you being with, 'you got it, boss!'.
+The prompt is: %s
+    `, message)
+		response := callOllama(promptMessage)
 		c.HTML(http.StatusOK, "prompt.html", gin.H{
-			"Response": response,
+			"Response": fmt.Sprintf("Assistant: %s", response),
 		})
 	})
 	if err := router.Run(":31000"); err != nil {

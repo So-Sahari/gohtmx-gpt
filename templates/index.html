@@ -10,22 +10,18 @@
         <script src="https://unpkg.com/htmx.org@1.9.7"
           integrity="sha384-EAzY246d6BpbWR7sQ8+WEm40J8c3dHFsqC58IgPlh4kMbRRI6P6WA+LA/qGAyAu8"
           crossorigin="anonymous"></script>
-
-        <style>
-            .htmx-indicator{
-                opacity:0;
-                transition: opacity 10ms ease-in;
-            }
-            .htmx-request .htmx-indicator{
-                opacity:1
-            }
-        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
     </head>
     <body class="bg-gray-900">
       <div class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 p-4">
         <div>
           <p>{{.Message}}</p>
-          <div class="border-4 border-t-4 border-gray-200 rounded-full w-8 h-8 animate-spin htmx-indicator border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
         </div>
 
         {{template "prompt.html" .}}
