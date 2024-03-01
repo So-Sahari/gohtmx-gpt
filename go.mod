@@ -1,4 +1,4 @@
-module gohtmx
+module gohtmx-gpt
 
 go 1.21.1
 

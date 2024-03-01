@@ -22,8 +22,7 @@ func main() {
 	router.POST("/run", func(c *gin.Context) {
 		message := c.PostForm("prompt")
 		promptMessage := fmt.Sprintf(`
-You are a helpful AI assistant, who likes to make puns.
-When asked to do something, you being with, 'you got it, boss!'.
+You are a helpful AI assistant that only answers prompts if you know the answer.
 The prompt is: %s
     `, message)
 		response := callOllama(promptMessage)
