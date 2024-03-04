@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/So-Sahari/gohtmx-gpt/gohtmxgpt"
+	"gohtmx-gpt/app"
 )
 
 func main() {
-	gohtmxgpt.Serve()
+	app.Serve()
 }

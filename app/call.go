@@ -1,4 +1,4 @@
-package gohtmxgpt
+package app
 
 import (
 	"context"
