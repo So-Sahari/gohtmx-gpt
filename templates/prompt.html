@@ -16,15 +16,15 @@
 
   <script>
   document.addEventListener('htmx:beforeRequest', function(event) {
-      if (event.target.id === 'submitBtn') {
-          event.target.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-      }
+    if (event.target.id === 'submitBtn') {
+        event.target.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    }
   });
 
   document.addEventListener('htmx:afterRequest', function(event) {
-      if (event.target.id === 'submitBtn') {
-          event.target.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
-      }
+    if (event.target.id === 'submitBtn') {
+        event.target.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
+    }
   });
   </script>
 
